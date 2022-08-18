@@ -39,7 +39,7 @@ public class OsTimer {
         this.timerCallback = pluginCall;
         this.period = period;
         this.delay=delay;
-        if (mtimer!=null) mtimer.cancel();
+        //if (mtimer!=null) mtimer.cancel();
         mtimer.scheduleAtFixedRate(mTask, delay, period);
     }
     public void stop(){
