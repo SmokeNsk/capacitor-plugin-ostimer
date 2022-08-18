@@ -1,0 +1,101 @@
+{
+  "api": {
+    "name": "OsTimerPlugin",
+    "slug": "ostimerplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "tick",
+        "signature": "(callback: OsTimerCallback) => Promise<CallbackID>",
+        "parameters": [
+          {
+            "name": "callback",
+            "docs": "",
+            "type": "OsTimerCallback"
+          }
+        ],
+        "returns": "Promise<string>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "OsTimerCallback",
+          "CallbackID"
+        ],
+        "slug": "tick"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [
+    {
+      "name": "OsTimerCallback",
+      "slug": "ostimercallback",
+      "docs": "",
+      "types": [
+        {
+          "text": "(tick: number | null, err?: any): void",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "CallbackID",
+      "slug": "callbackid",
+      "docs": "",
+      "types": [
+        {
+          "text": "string",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": [
+    {
+      "name": "OsTimerPlugin",
+      "slug": "ostimerplugin",
+      "properties": [
+        {
+          "name": "delay",
+          "tags": [
+            {
+              "text": "1.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"light\"",
+              "name": "example"
+            }
+          ],
+          "docs": "Override the cool theme style if your app doesn't support light/dark theme changes.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "period",
+          "tags": [
+            {
+              "text": "1.0.0",
+              "name": "since"
+            },
+            {
+              "text": "#ffffff",
+              "name": "default"
+            },
+            {
+              "text": "\"#FF9900\"",
+              "name": "example"
+            }
+          ],
+          "docs": "Color of the cool icon in hex format, #RRGGBB or #RRGGBBAA.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ],
+      "docs": ""
+    }
+  ]
+}
