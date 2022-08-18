@@ -43,6 +43,6 @@ public class OsTimer {
         mtimer.scheduleAtFixedRate(mTask, delay, period);
     }
     public void stop(){
-        mtimer.cancel(); 
+        mtimer.cancel();
     }
 }
