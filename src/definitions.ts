@@ -33,6 +33,9 @@ export interface OsTimerOptions {
     delay?:number;
     period?:number;
 }
+export interface OsTimerEventResult{
+    tick:number
+}
 export interface OsTimerPlugin {
 
     start(options?:OsTimerOptions): void;
