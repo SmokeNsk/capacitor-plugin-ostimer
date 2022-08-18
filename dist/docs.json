@@ -76,11 +76,15 @@
               "name": "since"
             },
             {
-              "text": "\"light\"",
+              "text": "2000",
+              "name": "default"
+            },
+            {
+              "text": "\"2000\"",
               "name": "example"
             }
           ],
-          "docs": "Override the cool theme style if your app doesn't support light/dark theme changes.",
+          "docs": "Delay before start Timer.",
           "complexTypes": [],
           "type": "number | undefined"
         },
@@ -92,15 +96,15 @@
               "name": "since"
             },
             {
-              "text": "#ffffff",
+              "text": "1500",
               "name": "default"
             },
             {
-              "text": "\"#FF9900\"",
+              "text": "\"2000\"",
               "name": "example"
             }
           ],
-          "docs": "Color of the cool icon in hex format, #RRGGBB or #RRGGBBAA.",
+          "docs": "Period of Timer ticks",
           "complexTypes": [],
           "type": "number | undefined"
         }
