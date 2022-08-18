@@ -1,4 +1,5 @@
-/// <reference types="@capacitor/cli" />
+// <reference types="@capacitor/cli" />
+// @ts-ignore
 
 declare module '@capacitor/cli' {
     export interface PluginsConfig {
