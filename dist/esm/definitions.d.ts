@@ -20,7 +20,8 @@ declare module '@capacitor/cli' {
     }
 }
 export declare type CallbackID = string;
-export declare type OsTimerCallback = (tick: number | null, err?: any) => void;
+export declare const EVENT_NAME = "OsTimerTick";
 export interface OsTimerPlugin {
-    tick(callback: OsTimerCallback): Promise<CallbackID>;
+    start(delay?: number, period?: number): void;
+    stop(): void;
 }

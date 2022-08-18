@@ -1,14 +1,13 @@
 package ru.lab332.caplugin.ostimer;
 
-import com.getcapacitor.PluginCall;
-import com.getcapacitor.PluginResult;
-
 import java.util.Timer;
 import java.util.TimerTask;
 
 
+
 public class OsTimer {
-    PluginCall timerCallback;
+
+    OsTimerCallback timerCallback;
     long period = 1000;
     long delay=1000;
     private Timer mtimer = new Timer();
@@ -28,11 +27,11 @@ public class OsTimer {
                 //JSONObject message = new JSONObject();
                 try {
                     //message.put("tick", String.valueOf(mSecondPassed));
-                    PluginResult result = new PluginResult();
-                    //result.setKeepCallback(true);
-                    result.put("tick",mSecondPassed);
-                    timerCallback.setKeepAlive(true);
-                    timerCallback.successCallback(result);
+//                    PluginResult result = new PluginResult();
+//                    //result.setKeepCallback(true);
+//                    result.put("tick",mSecondPassed);
+
+                    timerCallback.handle(mSecondPassed);
 
                 } catch (Exception e) { // this shouldn't happen
                     e.printStackTrace();
@@ -42,14 +41,15 @@ public class OsTimer {
         }
     };
 
-    public void start(PluginCall pluginCall, long delay,long period) {
+    public void start(OsTimerCallback pluginCall, long delay, long period) {
         this.timerCallback = pluginCall;
         this.period = period;
         this.delay=delay;
+        if (mtimer!=null) mtimer.cancel();
         mtimer.scheduleAtFixedRate(mTask, delay, period);
     }
     public void stop(){
         mtimer.cancel();
-        timerCallback.reject("stop");
+        //timerCallback.reject("stop");
     }
 }

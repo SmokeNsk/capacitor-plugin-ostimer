@@ -13,39 +13,34 @@ npx cap sync
 
 <docgen-index>
 
-* [`tick(...)`](#tick)
-* [Type Aliases](#type-aliases)
+* [`start(...)`](#start)
+* [`stop()`](#stop)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### tick(...)
+### start(...)
 
 ```typescript
-tick(callback: OsTimerCallback) => Promise<CallbackID>
+start(delay?: number | undefined, period?: number | undefined) => void
 ```
 
-| Param          | Type                                                        |
-| -------------- | ----------------------------------------------------------- |
-| **`callback`** | <code><a href="#ostimercallback">OsTimerCallback</a></code> |
-
-**Returns:** <code>Promise&lt;string&gt;</code>
+| Param        | Type                |
+| ------------ | ------------------- |
+| **`delay`**  | <code>number</code> |
+| **`period`** | <code>number</code> |
 
 --------------------
 
 
-### Type Aliases
+### stop()
 
+```typescript
+stop() => void
+```
 
-#### OsTimerCallback
-
-<code>(tick: number | null, err?: any): void</code>
-
-
-#### CallbackID
-
-<code>string</code>
+--------------------
 
 </docgen-api>

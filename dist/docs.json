@@ -6,53 +6,42 @@
     "tags": [],
     "methods": [
       {
-        "name": "tick",
-        "signature": "(callback: OsTimerCallback) => Promise<CallbackID>",
+        "name": "start",
+        "signature": "(delay?: number | undefined, period?: number | undefined) => void",
         "parameters": [
           {
-            "name": "callback",
+            "name": "delay",
             "docs": "",
-            "type": "OsTimerCallback"
+            "type": "number | undefined"
+          },
+          {
+            "name": "period",
+            "docs": "",
+            "type": "number | undefined"
           }
         ],
-        "returns": "Promise<string>",
+        "returns": "void",
         "tags": [],
         "docs": "",
-        "complexTypes": [
-          "OsTimerCallback",
-          "CallbackID"
-        ],
-        "slug": "tick"
+        "complexTypes": [],
+        "slug": "start"
+      },
+      {
+        "name": "stop",
+        "signature": "() => void",
+        "parameters": [],
+        "returns": "void",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "stop"
       }
     ],
     "properties": []
   },
   "interfaces": [],
   "enums": [],
-  "typeAliases": [
-    {
-      "name": "OsTimerCallback",
-      "slug": "ostimercallback",
-      "docs": "",
-      "types": [
-        {
-          "text": "(tick: number | null, err?: any): void",
-          "complexTypes": []
-        }
-      ]
-    },
-    {
-      "name": "CallbackID",
-      "slug": "callbackid",
-      "docs": "",
-      "types": [
-        {
-          "text": "string",
-          "complexTypes": []
-        }
-      ]
-    }
-  ],
+  "typeAliases": [],
   "pluginConfigs": [
     {
       "name": "OsTimerPlugin",

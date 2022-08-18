@@ -1,4 +1,4 @@
 // <reference types="@capacitor/cli" />
 // @ts-ignore
-export {};
+export const EVENT_NAME = "OsTimerTick";
 //# sourceMappingURL=definitions.js.map

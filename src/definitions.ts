@@ -27,11 +27,12 @@ declare module '@capacitor/cli' {
 
 export type CallbackID = string;
 
-export type OsTimerCallback = (tick: number | null, err?: any) => void;
+export const EVENT_NAME = "OsTimerTick";
 
 
 export interface OsTimerPlugin {
 
-    tick(callback: OsTimerCallback): Promise<CallbackID>;
+    start(delay?: number, period?: number): void;
+    stop():void;
 }
 

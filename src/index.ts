@@ -1,6 +1,6 @@
-import { registerPlugin } from '@capacitor/core';
+import {registerPlugin} from '@capacitor/core';
 
-import type { OsTimerPlugin } from './definitions';
+import type {OsTimerPlugin} from './definitions';
 
 const OsTimer = registerPlugin<OsTimerPlugin>('OsTimer', {
   web: () => import('./web').then(m => new m.OsTimerWeb()),
