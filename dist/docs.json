@@ -1,0 +1,90 @@
+{
+  "api": {
+    "name": "OsTimerPlugin",
+    "slug": "ostimerplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "start",
+        "signature": "(delay?: number | undefined, period?: number | undefined) => void",
+        "parameters": [
+          {
+            "name": "delay",
+            "docs": "",
+            "type": "number | undefined"
+          },
+          {
+            "name": "period",
+            "docs": "",
+            "type": "number | undefined"
+          }
+        ],
+        "returns": "void",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "start"
+      },
+      {
+        "name": "stop",
+        "signature": "() => void",
+        "parameters": [],
+        "returns": "void",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "stop"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": [
+    {
+      "name": "OsTimerPlugin",
+      "slug": "ostimerplugin",
+      "properties": [
+        {
+          "name": "delay",
+          "tags": [
+            {
+              "text": "1.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"light\"",
+              "name": "example"
+            }
+          ],
+          "docs": "Override the cool theme style if your app doesn't support light/dark theme changes.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "period",
+          "tags": [
+            {
+              "text": "1.0.0",
+              "name": "since"
+            },
+            {
+              "text": "#ffffff",
+              "name": "default"
+            },
+            {
+              "text": "\"#FF9900\"",
+              "name": "example"
+            }
+          ],
+          "docs": "Color of the cool icon in hex format, #RRGGBB or #RRGGBBAA.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ],
+      "docs": ""
+    }
+  ]
+}
