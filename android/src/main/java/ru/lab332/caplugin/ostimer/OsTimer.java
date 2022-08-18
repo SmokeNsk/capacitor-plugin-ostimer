@@ -24,13 +24,7 @@ public class OsTimer {
             mSecondPassed++;
 
             if (timerCallback != null) {
-                //JSONObject message = new JSONObject();
                 try {
-                    //message.put("tick", String.valueOf(mSecondPassed));
-//                    PluginResult result = new PluginResult();
-//                    //result.setKeepCallback(true);
-//                    result.put("tick",mSecondPassed);
-
                     timerCallback.handle(mSecondPassed);
 
                 } catch (Exception e) { // this shouldn't happen
@@ -49,7 +43,6 @@ public class OsTimer {
         mtimer.scheduleAtFixedRate(mTask, delay, period);
     }
     public void stop(){
-        mtimer.cancel();
-        //timerCallback.reject("stop");
+        mtimer.cancel(); 
     }
 }
