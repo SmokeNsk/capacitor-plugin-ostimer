@@ -10,13 +10,13 @@ export class OsTimerWeb extends WebPlugin {
         //   return options;
         // }
     }
-    start(delay = 1500, period = 1500) {
+    start(options) {
         clearInterval(this.tmr);
-        if (delay) {
+        if (options.delay) {
             //setTimeout(()=>this.startd(period),delay);
             void 0;
         }
-        this.startd(period);
+        this.startd(options.period);
         //return Promise.resolve(this.timerCnt.toString());
     }
     stop() {

@@ -18,6 +18,7 @@ public class OsTimerPlugin extends Plugin {
 
     @PluginMethod(returnType = PluginMethod.RETURN_NONE)
     public void start(PluginCall call) {
+        System.out.println( call.getData().toString());
         int delay = call.getInt("delay", getConfig().getInt("delay", 1500));
         int period = call.getInt("period", getConfig().getInt("period", 1500));
         osTimer.start(

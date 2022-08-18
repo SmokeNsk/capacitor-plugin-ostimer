@@ -29,10 +29,13 @@ export type CallbackID = string;
 
 export const EVENT_NAME = "OsTimerTick";
 
-
+export interface OsTimerOptions {
+    delay?:number;
+    period?:number;
+}
 export interface OsTimerPlugin {
 
-    start(delay?: number, period?: number): void;
+    start(options?:OsTimerOptions): void;
     stop():void;
 }
 

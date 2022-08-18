@@ -15,6 +15,7 @@ npx cap sync
 
 * [`start(...)`](#start)
 * [`stop()`](#stop)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -24,13 +25,12 @@ npx cap sync
 ### start(...)
 
 ```typescript
-start(delay?: number | undefined, period?: number | undefined) => void
+start(options?: OsTimerOptions | undefined) => void
 ```
 
-| Param        | Type                |
-| ------------ | ------------------- |
-| **`delay`**  | <code>number</code> |
-| **`period`** | <code>number</code> |
+| Param         | Type                                                      |
+| ------------- | --------------------------------------------------------- |
+| **`options`** | <code><a href="#ostimeroptions">OsTimerOptions</a></code> |
 
 --------------------
 
@@ -42,5 +42,16 @@ stop() => void
 ```
 
 --------------------
+
+
+### Interfaces
+
+
+#### OsTimerOptions
+
+| Prop         | Type                |
+| ------------ | ------------------- |
+| **`delay`**  | <code>number</code> |
+| **`period`** | <code>number</code> |
 
 </docgen-api>

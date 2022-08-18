@@ -9,13 +9,13 @@ export class OsTimerWeb extends WebPlugin implements OsTimerPlugin {
 
   startd=(period:number)=>this.tmr = setInterval(() => this.notifyListeners(EVENT_NAME, {tick: this.timerCnt++}), period);
 
-  start(delay=1500, period=1500): void {
+  start(options:{delay:1500, period:1500}): void {
     clearInterval(this.tmr);
-    if (delay) {
+    if (options.delay) {
       //setTimeout(()=>this.startd(period),delay);
       void 0;
     }
-    this.startd(period);
+    this.startd(options.period);
     //return Promise.resolve(this.timerCnt.toString());
   }
 

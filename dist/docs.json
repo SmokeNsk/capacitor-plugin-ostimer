@@ -7,23 +7,20 @@
     "methods": [
       {
         "name": "start",
-        "signature": "(delay?: number | undefined, period?: number | undefined) => void",
+        "signature": "(options?: OsTimerOptions | undefined) => void",
         "parameters": [
           {
-            "name": "delay",
+            "name": "options",
             "docs": "",
-            "type": "number | undefined"
-          },
-          {
-            "name": "period",
-            "docs": "",
-            "type": "number | undefined"
+            "type": "OsTimerOptions | undefined"
           }
         ],
         "returns": "void",
         "tags": [],
         "docs": "",
-        "complexTypes": [],
+        "complexTypes": [
+          "OsTimerOptions"
+        ],
         "slug": "start"
       },
       {
@@ -39,7 +36,31 @@
     ],
     "properties": []
   },
-  "interfaces": [],
+  "interfaces": [
+    {
+      "name": "OsTimerOptions",
+      "slug": "ostimeroptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "delay",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "period",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    }
+  ],
   "enums": [],
   "typeAliases": [],
   "pluginConfigs": [

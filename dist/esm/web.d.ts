@@ -5,6 +5,9 @@ export declare class OsTimerWeb extends WebPlugin implements OsTimerPlugin {
     timerCnt: number;
     tmr: string | number | NodeJS.Timeout | undefined;
     startd: (period: number) => NodeJS.Timeout;
-    start(delay?: number, period?: number): void;
+    start(options: {
+        delay: 1500;
+        period: 1500;
+    }): void;
     stop(): void;
 }

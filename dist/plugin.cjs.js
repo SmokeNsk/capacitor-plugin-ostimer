@@ -22,9 +22,10 @@ class OsTimerWeb extends core.WebPlugin {
         //   return options;
         // }
     }
-    start(delay = 1500, period = 1500) {
+    start(options) {
         clearInterval(this.tmr);
-        this.startd(period);
+        if (options.delay) ;
+        this.startd(options.period);
         //return Promise.resolve(this.timerCnt.toString());
     }
     stop() {
