@@ -11,7 +11,7 @@ public class OsTimerPlugin: CAPPlugin {
     private var tmrCounter=0
     private static let EVENT_NAME="OsTimerTick"
     
-    @objc func start(_ call: CAPPluginCall){
+    @objc public func start(_ call: CAPPluginCall){
         /*let delay=call.getString("delay") ?? (
         getConfigValue("delay") as? String ?? "1500")*/
         let period=call.getInt("period") ?? Int(getConfigValue("period") as? String ?? "2000")
@@ -28,7 +28,7 @@ public class OsTimerPlugin: CAPPlugin {
         call.resolve()
     }
 
-    @objc func stop(_ call: CAPPluginCall){
+    @objc public func stop(_ call: CAPPluginCall){
         call.resolve()
     }
 }

@@ -47,7 +47,7 @@ import Foundation
         eventHandler = nil
     }
 
-    func resume() {
+    @objc public func resume() {
         if state == .resumed {
             return
         }
@@ -55,7 +55,7 @@ import Foundation
         timer.resume()
     }
 
-    func suspend() {
+    @objc public func suspend() {
         if state == .suspended {
             return
         }
