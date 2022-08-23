@@ -7,17 +7,23 @@ import Capacitor
  */
 @objc(OsTimerPlugin)
 public class OsTimerPlugin: CAPPlugin {
-    private let osTimer : OsTimer
-
+    private var osTimer = OsTimer(timeInterval: 2)
+    private var tmrCounter=0
+    private static let EVENT_NAME="OsTimerTick"
+    
     @objc func start(_ call: CAPPluginCall){
-        let delay=Int(call.getString("delay")??, getConfigValue("delay") as? string) ?? 1500
-        let period=Int(call.getString("delay")??, getConfigValue("delay") as? string) ?? 1500
-        if (osTimer==nil){
-            osTimer=OsTimer(timeInterval: 3)
-        }
+        /*let delay=call.getString("delay") ?? (
+        getConfigValue("delay") as? String ?? "1500")*/
+        let period=call.getInt("period") ?? Int(getConfigValue("period") as? String ?? "2000")
+         
+        osTimer.timeInterval=TimeInterval(period!/1000)
+        
         osTimer.eventHandler={
-            self.notifyListeners("OsTimerTick",[:])
+    
+            self.tmrCounter=self.tmrCounter+1
+            self.notifyListeners(OsTimerPlugin.EVENT_NAME,  data: ["tick":self.tmrCounter])
         }
+ 
         osTimer.resume()
         call.resolve()
     }
@@ -26,3 +32,4 @@ public class OsTimerPlugin: CAPPlugin {
         call.resolve()
     }
 }
+
