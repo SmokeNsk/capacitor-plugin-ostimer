@@ -12,7 +12,7 @@ import Foundation
 /// already resumed (noted by https://github.com/SiftScience/sift-ios/issues/52
 @objc public class OsTimer {
 
-    let timeInterval: TimeInterval
+    var timeInterval: TimeInterval
     
     init(timeInterval: TimeInterval) {
         self.timeInterval = timeInterval
