@@ -37,12 +37,15 @@ public class OsTimer {
 
     public void start(OsTimerCallback pluginCall, long delay, long period) {
         this.timerCallback = pluginCall;
+
         this.period = period;
         this.delay=delay;
         //if (mtimer!=null) mtimer.cancel();
         mtimer.scheduleAtFixedRate(mTask, delay, period);
     }
     public void stop(){
-        mtimer.cancel();
+        try {
+            mtimer.cancel();
+        }catch (Exception e){}
     }
 }
