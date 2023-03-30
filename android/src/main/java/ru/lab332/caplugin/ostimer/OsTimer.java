@@ -40,15 +40,10 @@ public class OsTimer {
 
         this.period = period;
         this.delay=delay;
-        try {
-            if (mtimer != null) mtimer.cancel();
-        }catch (Exception ex){
-
-        }finally {
-            mtimer=null;
+        if (mtimer==null) {
+            mtimer = new Timer();
+            mtimer.scheduleAtFixedRate(mTask, delay, period);
         }
-        mtimer=new Timer();
-        mtimer.scheduleAtFixedRate(mTask, delay, period);
 
     }
     public void stop(){
