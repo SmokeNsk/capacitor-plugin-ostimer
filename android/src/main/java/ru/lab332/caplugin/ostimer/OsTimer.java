@@ -10,7 +10,7 @@ public class OsTimer {
     OsTimerCallback timerCallback;
     long period = 1000;
     long delay=1000;
-    private Timer mtimer = new Timer();
+    private Timer mtimer =null;
     private int mSecondPassed = 0;
 
     public OsTimer() {
@@ -40,8 +40,16 @@ public class OsTimer {
 
         this.period = period;
         this.delay=delay;
-        //if (mtimer!=null) mtimer.cancel();
+        try {
+            if (mtimer != null) mtimer.cancel();
+        }catch (Exception ex){
+
+        }finally {
+            mtimer=null;
+        }
+        mtimer=new Timer();
         mtimer.scheduleAtFixedRate(mTask, delay, period);
+
     }
     public void stop(){
         try {
