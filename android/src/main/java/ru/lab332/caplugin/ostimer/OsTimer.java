@@ -45,8 +45,8 @@ public class OsTimer {
             }catch (Exception ex){
 
             }
-            //mtimer = null;
-        }
+        }else
+            mtimer=new Timer();
         mtimer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
